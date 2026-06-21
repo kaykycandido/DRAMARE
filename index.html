@@ -10,42 +10,38 @@
     <link rel="shortcut icon" sizes="128x128" href="modelos/dramareLogo-SemFundo.png" type="image/x-icon" >
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script/script.js" defer></script>
 </head>
 
 <body>
     <section class="menu-lateral">
 
-    <div class="menu-logo">
-        <img src="modelos/dramareLogo-SemFundo.png">
-        <h2>DRAMARÉ</h2>
-    </div>
+        <div class="menu-logo">
+            <img id="dramareName" src="modelos/LETRA DRAMARÉ.png">
+            <img onclick="menulateral()" id="seta" src="modelos/seta-esquerda.png" >
+        </div>
 
-    <nav class="menu-links">
-        <a href="#inicio">INÍCIO</a>
-        <a href="#produtos">PRODUTOS</a>
-        <a href="#colecao">COLEÇÃO</a>
-        <a href="#contato">CONTATO</a>
-    </nav>
+        <div class="menu-links">
+            <a href="#inicio">INÍCIO</a>
+            
+            <details>
+                <summary>
+                    <span>PRODUTOS</span>
+                </summary>
+                <div class="submenu">
+                    <a href="#">Camisetas</a>
+                    <a href="#">Regatas</a>
+                    <a href="#">Eco bags</a>
+                </div>
+            </details>
 
-    <div class="menu-social">
-        <a href="https://instagram.com" target="_blank">
-            INSTAGRAM
-        </a>
-
-        <a href="https://wa.me/5511999999999" target="_blank">
-            WHATSAPP
-        </a>
-    </div>
-
-    <p class="slogan">
-        PRA QUEM É ORIGINAL
-    </p>
-
+            <a href="#contato">CONTATO</a>
+        </div>
     </section>
     <header>
 
         <div class="logo">
-            <img src="modelos/menu-aberto.png">
+            <img onclick="menulateral()" src="modelos/menu-aberto.png">
         </div>
 
         <nav>
@@ -219,8 +215,8 @@
         <div class="footer-col">
             <h3>FALE COM A GENTE</h3>
 
-            <p>(88) 99999-9999</p>
-            <p>oi@dramare.com.br</p>
+            <p>(85) 9 9182-5946</p>
+            <p>storedramare@gmail.com</p>
             <p>Fortaleza - CE</p>
         </div>
 

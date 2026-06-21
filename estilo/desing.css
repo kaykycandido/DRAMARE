@@ -23,7 +23,7 @@ h1,h2,.logo{
 
 /* MENU LATERAL */
 .menu-lateral{
-    display: none;
+    display: block;
     position: fixed;
     left: 0;
     border-top: 2px solid var(--mostarda);
@@ -32,16 +32,29 @@ h1,h2,.logo{
     height: 100%;
     width: 25%;
     background-color: var(--azul-mar);
+    transform:translateX(-100%);
+
+    transition:transform .4s ease;
+}
+.ativo{
+    transform:translateX(0);
 }
 .menu-logo{
-    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
 }
 
-.menu-logo img{
-    width:70px;
+.menu-logo #dramareName{
+    width:180px;
     margin-bottom:10px;
 }
 
+.menu-logo #seta{
+    width: 40px;
+    height: 40px;
+}
 .menu-logo h2{
     font-family:'Cormorant Garamond', serif;
     color:#D9A441;
@@ -51,38 +64,43 @@ h1,h2,.logo{
 .menu-links{
     display:flex;
     flex-direction:column;
-    gap:25px;
-    text-align:center;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .menu-links a{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    border: solid 1px var(--mostarda);
     text-decoration:none;
     color:#F4ECDD;
-    font-size:1.2rem;
-    letter-spacing:2px;
+    font-size:1.1rem;
+
+}
+.menu-links details{
+    width: 100%;
+    border: solid 1px var(--mostarda);
+    color:#F4ECDD;
+    font-size:1.1rem;
+}
+summary{
+    cursor:pointer;
+    padding:10px 5px;
 }
 
-.menu-links a:hover{
-    color:#D9A441;
-}
-
-.menu-social{
+.submenu{
     display:flex;
     flex-direction:column;
-    gap:10px;
-    text-align:center;
+    padding:0px 0 0px 15px;
 }
 
-.menu-social a{
-    text-decoration:none;
-    color:#F4ECDD;
-}
-
-.slogan{
-    color:#D9A441;
-    letter-spacing:3px;
-    font-size:.8rem;
-    text-align:center;
+.submenu a{
+    border-right: none;
+    border-bottom: none;
+    text-transform: uppercase;
 }
 /* HEADER */
 
@@ -130,12 +148,6 @@ nav a{
     font-size: 20px;
     text-decoration:none;
     padding: 5px 7px;
-
-    &:hover{
-        padding: 5px 7px;
-        border-radius: 10px;
-        background-color: var(--azul-mar);
-    }
 }
 
 .estrela{
@@ -577,7 +589,14 @@ nav a{
     position: fixed;
     bottom: 10px;
     right: 20px;
-    width: 30px;
+    width: 45px;
     border-radius: 50px;
     cursor: pointer;
-}}
+}
+
+/*MENU LATERAL*/
+.menu-lateral{
+  width: 100%;
+
+}
+}
